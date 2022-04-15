@@ -1,0 +1,48 @@
+{
+    "students": [
+      {
+        "name": " Ahsanul Huq",
+        "middlename": null,
+        "age": 21,
+        "cgpa": 2.71,
+        "isResgistered": true,
+        "language": [
+          "Bangla",
+          "English",
+          "Hindi"
+        ],
+        "friends": [
+          {
+            "name": "Shibu",
+            "age": 22
+          },
+          {
+            "name": "Ahsan",
+            "age": 23
+          }
+        ]
+      },
+      {
+        "name": " Huq",
+        "middlename": null,
+        "age": 26,
+        "cgpa": 2.75,
+        "isResgistered": false,
+        "language": [
+          "Bangla",
+          "English",
+          "Hindi"
+        ],
+        "friends": [
+          {
+            "name": "ami",
+            "age": 20
+          },
+          {
+            "name": "tmi",
+            "age": 19
+          }
+        ]
+      }
+    ]
+  }
