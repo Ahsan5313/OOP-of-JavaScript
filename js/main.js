@@ -1,29 +1,32 @@
 
-let amount = prompt('You amount');
-let currency = prompt('You currency');
 
-if(amount === '' || currency === ''){
+// Sum all prime numbers up to and including the provided number
 
+function primeSum(num){
 
-    alert('All fields are required')
-}else{
+    let totalPrime = 0;
 
-    if(amount === NaN || currency === NaN){
+    for(let i = 2; i < num; i++){
 
-        alert('You can not put string')
-    }else{
+        for(let j = 2; j < num ; j++){
 
-        if(currency === 'dollar'){
+             if(i === j){
 
-            console.log(`${amount} ${currency} = ${amount * 86.2} BDT`)
-        }else if(currency === 'euro'){
-    
-            console.log(`${amount} ${currency} = ${amount * 115.2} BDT`)
-        }else if(currency === 'pound'){
-    
-            console.log(`${amount} ${currency} = ${amount * 98.2} BDT`)
+                totalPrime += i
+             }
+
+             if(i % j === 0){
+                break
+
+             }
         }
+
     }
-    
+
+    return totalPrime;
 }
 
+console.log(primeSum(10));
+console.log(primeSum(101));
+console.log(primeSum(1010));
+console.log(primeSum(10101));
