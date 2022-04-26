@@ -61,3 +61,12 @@ console.log(person2.job);
 
 console.log(person2.printAll())
 
+console.log(person1.printAll())
+
+
+
+console.log(Person.prototype);
+console.log(person1.__proto__)
+console.log(Person.prototype === person1.__proto__);
+console.log(person1.hasOwnProperty("name"))
+
