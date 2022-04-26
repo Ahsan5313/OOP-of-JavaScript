@@ -1,72 +1,107 @@
-// OOP of JavaScript;
-// let we discuss about OOP of JavaScript;
-// Function constructor;
-// How to make a function constructor;
-// Why are we gonna make a function constructor?
-// Just example like, i need describe to a person how can i do by programming;
-// Obiously i need make a object; but if i need more than 10 person it would be
-// Large to describe all of person;
-// We can do it by using function constructor;
-// Here my object like
+// // OOP of JavaScript;
+// // let we discuss about OOP of JavaScript;
+// // Function constructor;
+// // How to make a function constructor;
+// // Why are we gonna make a function constructor?
+// // Just example like, i need describe to a person how can i do by programming;
+// // Obiously i need make a object; but if i need more than 10 person it would be
+// // Large to describe all of person;
+// // We can do it by using function constructor;
+// // Here my object like
 
-const person = {
+// const person = {
 
-    name :"Ahsanul Huq",
-    age : 21,
-    job : 'Student',
-    printAll : function(){
+//     name :"Ahsanul Huq",
+//     age : 21,
+//     job : 'Student',
+//     printAll : function(){
 
-        console.log(`My name is ${this.name} and my age is ${this.age} and my job is ${this.job}`)
-    }
-}
+//         console.log(`My name is ${this.name} and my age is ${this.age} and my job is ${this.job}`)
+//     }
+// }
 
-console.log(person.name);
-console.log(person.age);
-console.log(person.job);
-person.printAll()
-// In this we can describe to a person;
-// But there are somewhat condition to be a constructor like
-// 1. it will be an empty object;
-// 2. this keyword will donate the constructor function
-// 3. constructor will have link with prototype;
-// 4. it will return automatically
+// console.log(person.name);
+// console.log(person.age);
+// console.log(person.job);
+// person.printAll()
+// // In this we can describe to a person;
+// // But there are somewhat condition to be a constructor like
+// // 1. it will be an empty object;
+// // 2. this keyword will donate the constructor function
+// // 3. constructor will have link with prototype;
+// // 4. it will return automatically
 
-function Person(name, age, job){
+// function Person(name, age, job){
 
-    this.name = name;
-    this.age = age;
-    this.job = job;
+//     this.name = name;
+//     this.age = age;
+//     this.job = job;
 
  
 
+// }
+// Person.prototype.printAll = function(){
+
+//     console.log(`My name is ${this.name} and my age is ${this.age} and my job is a ${this.job}`)
+// }
+
+// const person1 = new Person('Ahsanul Huq', 21, 'Student');
+// console.log(person1.name);
+// console.log(person1.age);
+// console.log(person1.job);
+// person1.printAll()
+// // In this way we may create lots of object by using constructor function;
+
+// const person2 = new Person('Shibu', 21, 'Student');
+
+// console.log(person2.name);
+// console.log(person2.age);
+// console.log(person2.job);
+
+
+// console.log(person2.printAll())
+
+// console.log(person1.printAll())
+
+
+
+// console.log(Person.prototype);
+// console.log(person1.__proto__)
+// console.log(Person.prototype === person1.__proto__);
+// console.log(person1.hasOwnProperty("name"))
+
+
+// Problem solving of house rant by using functional constructor
+
+const HouseRant = function(amount){
+
+     this.amount = amount;
+    
 }
-Person.prototype.printAll = function(){
 
-    console.log(`My name is ${this.name} and my age is ${this.age} and my job is a ${this.job}`)
+HouseRant.prototype.houseRentIncr = function(){
+
+    this.amount += 1000;
+    console.log(`My house rent will be ${this.amount}`);
+    
 }
 
-const person1 = new Person('Ahsanul Huq', 21, 'Student');
-console.log(person1.name);
-console.log(person1.age);
-console.log(person1.job);
-person1.printAll()
-// In this way we may create lots of object by using constructor function;
+HouseRant.prototype.houseRentDec = function(){
 
-const person2 = new Person('Shibu', 21, 'Student');
+    this.amount -= 1000;
+    console.log(`My house rent will be ${this.amount}`);
+    
+}
 
-console.log(person2.name);
-console.log(person2.age);
-console.log(person2.job);
+const presentAmount = new HouseRant(10000);
 
 
-console.log(person2.printAll())
+console.log(presentAmount.amount);
+presentAmount.houseRentIncr();
+presentAmount.houseRentIncr();
+presentAmount.houseRentIncr();
+presentAmount.houseRentDec();
+presentAmount.houseRentDec();
+presentAmount.houseRentDec();
 
-console.log(person1.printAll())
-
-
-
-console.log(Person.prototype);
-console.log(person1.__proto__)
-console.log(Person.prototype === person1.__proto__);
-console.log(person1.hasOwnProperty("name"))
 
