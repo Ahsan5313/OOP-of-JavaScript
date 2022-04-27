@@ -105,3 +105,81 @@ presentAmount.houseRentDec();
 presentAmount.houseRentDec();
 
 
+// class constructor
+// What is class constructor well constructor is a one kind of blow print 
+// Like functional constructor.
+// So what's the deference between class constructor and functional constructor;
+// Let me explain
+// whenever i keep a method in functional constructor in this case we heave to
+// keep it prototype;
+// but on the other hand class constructor has default prototype;
+// let's go to code and see
+// Before going in code i should make sure that there are two ways to define to class
+// like class expression another thing is like class declaration;
+
+// class expression
+// const myCls = class {
+
+
+
+
+// }
+
+// class declarations like
+class Computer {
+
+    constructor(name, model, amount){
+
+        this.name = name;
+        this.model = model;
+        this.amount = amount
+    }
+
+    aboutComputer(){
+
+        console.log(`The name of the my computer is ${this.name} and model of computer is ${this.model}`)
+    }
+
+  
+
+}
+
+const dell = new Computer('Dell', 'ytr25');
+dell.aboutComputer();
+console.dir(dell);
+
+
+// So let's solve a problem by using class constructor
+
+class HouseRent {
+
+    constructor(amount){
+
+        this.amount = amount;
+    }
+
+    increment(){
+
+       this.amount += 1000;
+       console.log(`My next house rent will be ${this.amount}`);
+    };
+    decrement(){
+
+        this.amount -= 1000;
+        console.log(`My nest house rent will be ${this.amount}`);
+    };
+}
+
+const firstYear = new HouseRent(10000);
+console.log(firstYear.amount);
+firstYear.increment();
+firstYear.increment();
+firstYear.increment();
+firstYear.increment();
+const secondYear = new HouseRent(10000);
+console.log(secondYear.amount);
+secondYear.decrement();
+secondYear.decrement();
+secondYear.decrement();
+secondYear.decrement();
+
