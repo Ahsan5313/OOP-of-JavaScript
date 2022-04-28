@@ -183,3 +183,68 @@ secondYear.decrement();
 secondYear.decrement();
 secondYear.decrement();
 
+// So let's move in static mode
+// And getter and setter
+// So let's began 
+
+const MyStatic = function(name, age){
+
+    this.name = name;
+    this.age = age;
+}
+
+MyStatic.printName = function(){
+
+    console.log('This is Ahsanul Huq')
+}
+
+const person4 = new MyStatic('Ahsanul Huq', 21);
+console.log(person4.name);
+console.log(person4.age);
+console.log(person4)
+MyStatic.printName()
+
+class Computer1 {
+
+    constructor(name, model){
+
+        this.name = name;
+        this.model = model
+    }
+
+    aboutComputer(){
+
+        console.log(`The name of the my computer is ${this.name} and model of computer is ${this.model}`)
+
+    }
+
+    static printName(){
+
+        console.log(`This is my computer ${this.name}`)
+        
+    }
+
+    get computerName(){
+
+        return this.name
+    }
+
+    set computerName(value){
+
+        this.name = value
+    }
+}
+
+const hp = new Computer1('Hp', 'hltp3');
+console.log(hp.name);
+console.log(hp.model);
+console.log(hp)
+console.log(Computer1.prototype);
+Computer1.printName()
+const newHp = hp.computerName;
+console.log(newHp)
+hp.computerName = 'Dell';
+console.log(hp.name)
+
+
+
