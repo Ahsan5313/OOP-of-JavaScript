@@ -246,5 +246,26 @@ console.log(newHp)
 hp.computerName = 'Dell';
 console.log(hp.name)
 
+// Let's move in Object.create();
 
+const myObj = {
 
+    name : '',
+    model : '',
+    aboutComputer(){
+
+        console.log(`My computer name is ${this.name} and model is ${this.model}`)
+    }
+}
+
+const samsung = Object.create(myObj);
+samsung.name = 'Samsung';
+samsung.model = '2500m';
+console.log(samsung)
+samsung.aboutComputer();
+
+const nokia = Object.create(myObj);
+nokia.name = 'Nokia',
+nokia.model = 1200,
+console.log(nokia)
+nokia.aboutComputer()
