@@ -270,9 +270,9 @@ nokia.model = 1200,
 console.log(nokia)
 nokia.aboutComputer()
 
-Inheritance of JavaScript;
-How to make inheritance it;
-Let's began;
+// Inheritance of JavaScript;
+// How to make inheritance it;
+// Let's began;
 
 
 class Computer{
@@ -302,6 +302,11 @@ class Hp extends Computer{
 
         console.log(`My computer will gets ${this.warranty}`)
     }
+
+    useOfComputer(value){
+
+        console.log(`${(this.warranty) * 12 * 30 - (value) *30} `)
+    }
 }
 
 const newHp = new Hp('Hp', '20kg', 3);
@@ -313,3 +318,9 @@ newHp.aboutWarranty()
 
 console.log(newHp)
 console.log(Hp.prototype)
+newHp.useOfComputer(6)
+
+
+
+
+
