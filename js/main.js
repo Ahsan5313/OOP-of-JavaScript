@@ -321,8 +321,8 @@ console.log(Hp.prototype)
 newHp.useOfComputer(6)
 
 
-Encapsulation of JavaScript;
-Encapsulations is a one kind of hide
+// Encapsulation of JavaScript;
+// Encapsulations is a one kind of hide
 
 class Car {
 
@@ -356,3 +356,41 @@ console.log(bmw.year);
 console.log(bmw.warranty)
 bmw.aboutCar();
 
+
+
+// Polymorphism it means bohoropi
+
+class Computer {
+
+    constructor(name, model){
+
+        this.name = name;
+        this.model = model;
+    }
+
+    aboutComputer(){
+
+        console.log(`My computer name is ${this.name} and model is ${this.model}`)
+    }
+}
+
+class Hp extends Computer{
+
+    constructor(name, model, color) {
+        
+        super(name, model)
+        this.color = color
+    }
+
+    aboutComputer(){
+
+        console.log(`My computer name is ${this.name} and model is ${this.model} and computer color is ${this.color}`)
+    }
+
+   
+}
+
+const hp = new Hp('Hp', 'de2200', 'black');
+hp.aboutComputer();
+console.log(hp.color)
+hp.aboutComputer()
